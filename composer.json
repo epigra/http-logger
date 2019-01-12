@@ -1,0 +1,25 @@
+{
+    "name": "epigra/httplogger",
+    "description": "",
+    "authors": [
+        {
+            "name": "Uğur Aydoğdu",
+            "email": "ugur.aydogdu@epigra.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Epigra\\HttpLogger\\Providers\\HttpLoggerServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Epigra\\HttpLogger\\": "src"
+        }
+    }
+}

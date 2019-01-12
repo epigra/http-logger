@@ -1,0 +1,15 @@
+{
+    "name": "HttpLogger",
+    "alias": "httplogger",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "sidebar": 0,
+    "order": 9,
+    "providers": [
+        "Epigra\\HttpLogger\\Providers\\HttpLoggerServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
