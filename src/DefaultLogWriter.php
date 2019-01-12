@@ -13,11 +13,10 @@ use Epigra\HttpLogger\Interfaces\LogWriterInterface;
 class DefaultLogWriter implements LogWriterInterface
 {
     private $message = '';
-    private $hasMessage = false;
 
     public function saveLogs()
     {
-        Log::info($this->message);
+        if(!empty($this->message)) Log::info($this->message);
     }
 
     public function setRequestMessage(Request $request)
