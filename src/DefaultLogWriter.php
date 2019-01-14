@@ -16,7 +16,12 @@ class DefaultLogWriter implements LogWriterInterface
 
     public function saveLogs()
     {
-        if(!empty($this->message)) Log::info($this->message);
+        if(!empty(config('logging.channels.http-logger'))){
+            Log::channel('http-logger')->info($this->message);
+        }
+        else{
+            Log::info($this->message);
+        }
     }
 
     public function setRequestMessage(Request $request)

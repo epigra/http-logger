@@ -42,3 +42,14 @@ Route::post('/submit-form', function () {
     //
 })->middleware(\Epigra\HttpLogger\Middlewares\HttpLogger::class);
 ```
+
+You can use custom channel configuration on your config.php file by adding
+
+```php
+    'http-logger' => [
+        'driver' => 'daily',
+        'path' => storage_path('logs/responses_requests.log'),
+    ],
+```
+
+to your channels array.
